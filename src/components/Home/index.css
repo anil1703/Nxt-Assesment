@@ -1,0 +1,51 @@
+.orderlist {
+  list-style-type: decimal;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-left: 15px;
+}
+
+.buttonHomeStart {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: #164687;
+  height: 35px;
+  padding: 6px;
+}
+
+.homecont-one {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  padding: 20px;
+}
+
+.home-cont-one-head {
+  color: #164687;
+  margin-bottom: 15px;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-around;
+  height: 90vh;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+
+  .home-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .homecont-one {
+    width: 300px;
+    order: 2;
+  }
+  .bannr-home{
+    height: 200px;
+  }
+}
