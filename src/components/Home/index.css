@@ -35,7 +35,6 @@
 }
 
 @media (max-width: 768px) {
-
   .home-container {
     display: flex;
     flex-direction: column;
@@ -45,7 +44,7 @@
     width: 300px;
     order: 2;
   }
-  .bannr-home{
+  .bannr-home {
     height: 200px;
   }
 }
