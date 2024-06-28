@@ -1,0 +1,30 @@
+.qstnConatiner {
+  width: 100%;
+  padding: 25px;
+}
+
+.qstnName {
+  padding-bottom: 20px;
+  color: #164687;
+}
+
+.optionList {
+  list-style: none;
+  padding-top: 20px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.optionItem {
+  width: 380px;
+  height: 64px;
+  background-color: #ebf3ff;
+  color: #334155;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}

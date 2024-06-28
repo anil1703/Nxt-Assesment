@@ -1,0 +1,39 @@
+.assessment-home {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  gap: 30px;
+}
+
+.assessment-section-one {
+  background-color: aquamarine;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 70vw;
+  height: 80vh;
+}
+
+.assessment-section-two {
+  background-color: blanchedalmond;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30vw;
+  height: 80vh;
+}
+
+.next-button {
+  background-color: #164687;
+  color: white;
+  border-radius: 8px;
+  height: 36px;
+  width: 130px;
+  border: none;
+  align-self: flex-end;
+  margin: 20px;
+}
+.gap-between-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}

@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import {withRouter, Redirect} from 'react-router-dom'
 import Cookie from 'js-cookie'
 import './index.css'
@@ -6,13 +6,13 @@ import './index.css'
 const Login = props => {
   const [username, typingUsername] = useState('')
   const [password, typingPassword] = useState('')
-  const [isPswdVissible, changeTheOption] = useState('password')
+  const [isPswdVisible, changeTheOption] = useState('password')
 
   const changingUsername = event => typingUsername(event.target.value)
   const changingPassword = event => typingPassword(event.target.value)
 
   const [error, updatingError] = useState('')
-  const [isError, isErrorupdating] = useState(false)
+  const [isError, isErrorUpdating] = useState(false)
 
   const submittingForm = async event => {
     event.preventDefault()
@@ -29,12 +29,12 @@ const Login = props => {
       const {history} = props
       history.replace('/')
     } else {
-      isErrorupdating(true)
+      isErrorUpdating(true)
       updatingError(data.error_msg)
     }
   }
 
-  const changingtoVisible = event => {
+  const changingToVisible = event => {
     if (event.target.checked) {
       changeTheOption('text')
     } else {
@@ -55,7 +55,7 @@ const Login = props => {
           alt="login website logo"
           className="login-logo"
         />
-        <form onSubmit={submittingForm} className="from">
+        <form onSubmit={submittingForm} className="form">
           <label className="label" htmlFor="username">
             USERNAME
           </label>
@@ -66,23 +66,24 @@ const Login = props => {
             id="username"
             className="inputStyle"
           />
-          <label className="label" htmlFor="pass">
+          <label className="label" htmlFor="password">
             PASSWORD
           </label>
           <input
             value={password}
             onChange={changingPassword}
-            type={isPswdVissible}
-            id="pass"
+            type={isPswdVisible}
+            id="password"
             className="inputStyle"
           />
           <div className="shwPswdDiv">
             <input
-              onChange={changingtoVisible}
+              onChange={changingToVisible}
               type="checkbox"
-              className="checkBosStyle"
+              className="checkBoxStyle"
+              id="showPassword"
             />
-            <label>Show Password</label>
+            <label htmlFor="showPassword">Show Password</label>
           </div>
           <button type="submit" className="loginBtn">
             Login

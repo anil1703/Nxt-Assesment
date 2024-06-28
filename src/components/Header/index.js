@@ -17,7 +17,7 @@ const Header = () => {
         alt="logo"
         className="navbar-logo"
       />
-      <button onClick={logingOut} className="navbar-logout">
+      <button type="button" onClick={logingOut} className="navbar-logout">
         Logout
       </button>
     </nav>

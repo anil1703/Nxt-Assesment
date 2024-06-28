@@ -1,7 +1,12 @@
+import {useHistory} from 'react-router-dom'
 import Header from '../Header'
 import './index.css'
 
 const Home = () => {
+  const history = useHistory()
+  const startingAssesment = () => {
+    history.push('/assessment')
+  }
   return (
     <>
       <Header />
@@ -27,12 +32,19 @@ const Home = () => {
               </p>
             </li>
           </ol>
-          <button className="buttonHomeStart">Start Assessment</button>
+          <button
+            type="button"
+            onClick={startingAssesment}
+            className="buttonHomeStart"
+          >
+            Start Assessment
+          </button>
         </div>
         <div className="homecont-two">
           <img
             src="https://res.cloudinary.com/dafmi9027/image/upload/v1719399229/Nxt%20Assesment/Group_ps7qrx.png"
             className="bannr-home"
+            alt="sample"
           />
         </div>
       </div>
